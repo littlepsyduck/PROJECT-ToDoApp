@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#F2F4F7">
+
+    <ImageView
+        android:id="@+id/loginHint"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.075"
+        app:layout_constraintVertical_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sign_up_hint" />
+
+    <View
+        android:id="@+id/login_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/loginHint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <ImageView
+        android:id="@+id/login_logo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/login_view"
+        app:layout_constraintEnd_toEndOf="@+id/login_view"
+        app:layout_constraintHeight_percent="0.15"
+        app:layout_constraintStart_toStartOf="@+id/login_view"
+        app:layout_constraintTop_toTopOf="@+id/login_view"
+        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintWidth_percent="0.15"
+        app:srcCompat="@drawable/logo" />
+
+    <ImageView
+        android:id="@+id/loginButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/login_view"
+        app:layout_constraintEnd_toEndOf="@+id/loginPass"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="@+id/loginPass"
+        app:layout_constraintTop_toTopOf="@+id/login_view"
+        app:layout_constraintVertical_bias="1"
+        app:srcCompat="@drawable/sign_up_button" />
+
+    <TextView
+        android:id="@+id/login_title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/loginName"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/loginName"
+        app:layout_constraintEnd_toEndOf="@+id/loginName"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/loginName" />
+
+    <EditText
+        android:id="@+id/loginName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/loginPhone"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/loginButton"
+        app:layout_constraintEnd_toEndOf="@+id/login_view"
+        app:layout_constraintStart_toStartOf="@+id/login_view"
+        app:layout_constraintTop_toBottomOf="@+id/login_logo"
+        app:layout_constraintVertical_bias="0.15"
+        app:layout_constraintWidth_percent="0.6" />
+
+    <TextView
+        android:id="@+id/login_title_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/loginPass3"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/loginPass"
+        app:layout_constraintEnd_toEndOf="@+id/loginPass"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/loginPass" />
+
+    <EditText
+        android:id="@+id/loginPass"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/loginPass2"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/loginButton"
+        app:layout_constraintEnd_toEndOf="@+id/login_view"
+        app:layout_constraintStart_toStartOf="@+id/login_view"
+        app:layout_constraintTop_toBottomOf="@+id/loginName"
+        app:layout_constraintVertical_bias="0.2"
+        app:layout_constraintWidth_percent="0.6" />
+
+    <TextView
+        android:id="@+id/login_forgotPass"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/loginPass"
+        android:textColor="@color/m3_hint_foreground"
+        app:layout_constraintBottom_toTopOf="@+id/loginButton"
+        app:layout_constraintEnd_toEndOf="@+id/loginPass"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/loginPass"
+        app:layout_constraintTop_toBottomOf="@+id/loginPass"
+        app:layout_constraintVertical_bias="0.1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

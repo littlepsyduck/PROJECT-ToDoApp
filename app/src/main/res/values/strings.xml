@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">ToDoApp</string>
+    <string name="loginPhone">0974678647</string>
+    <string name="loginPass3">Mật khẩu</string>
+    <string name="loginName">Tên đăng nhập</string>
+    <string name="loginPass">Quên mật khẩu</string>
+    <string name="loginPass2">Hãy nhập mật khẩu của bạn</string>
+    <string name="signupName">Tên đăng ký</string>
+    <string name="name">Tên của bạn</string>
+    <string name="signupPhone2">Số điện thoại</string>
+    <string name="signupPhone">Số điện thoại của bạn</string>
+    <string name="signupEmail">Email</string>
+    <string name="email">Email của bạn</string>
+    <string name="signupPass">Nhập mật khẩu</string>
+    <string name="pass">Mật khẩu</string>
+    <string name="pass2">Nhập lại mật khẩu</string>
+    <string name="signupEmail2">Nhập lại mật khẩu</string>
+    <string name="profile_image">Avatar</string>
 </resources>

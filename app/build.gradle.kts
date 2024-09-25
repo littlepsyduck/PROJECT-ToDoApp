@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("com.google.devtools.ksp")
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
@@ -33,6 +35,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -42,6 +47,29 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+
+    implementation(libs.androidx.navigation.fragment)
+    implementation(libs.androidx.navigation.ui)
+    implementation (libs.androidx.navigation.fragment.ktx)
+    implementation (libs.androidx.navigation.ui.ktx)
+
+
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.adapters)
+    implementation(libs.androidx.ui.android)
+    ksp(libs.androidx.room.compiler)
+    implementation (libs.androidx.room.ktx)
+
+    implementation (libs.material.vversion)
+    implementation (libs.material.v1100)
+
+    implementation (libs.material)
+
+    implementation (libs.androidx.lifecycle.livedata)
+    implementation (libs.androidx.lifecycle.viewmodel)
+    implementation (libs.androidx.lifecycle.viewmodel.ktx)
+    implementation (libs.androidx.lifecycle.livedata.ktx)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

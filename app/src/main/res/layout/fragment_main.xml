@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.MainApp.MainFragment">
+
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0">
+
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/circle_shape"
+            android:contentDescription="@string/profile_image"
+            android:src="@drawable/img" />
+
+        <TextView
+            android:id="@+id/greeting_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Good morning 👋"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/calendarRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="22dp"
+        android:paddingEnd="21dp"
+        android:scrollbars="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/tasksRecyclerView"
+        app:layout_constraintTop_toBottomOf="@id/header_layout"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="-70dp"
+        tools:listitem="@layout/item_calendar_day" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tasksRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_menu"
+        app:layout_constraintHeight_percent="0.7"
+        app:layout_constraintTop_toBottomOf="@+id/header_layout"
+        app:layout_constraintVertical_bias="1"
+        tools:listitem="@layout/item_task_in_day" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1">
+
+        <ImageButton
+            android:id="@+id/btn_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="Menu"
+            android:src="@android:drawable/ic_menu_sort_by_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layout_constraintHorizontal_bias="0.05"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="Search"
+            android:src="@android:drawable/ic_menu_search"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_menu"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tasksRecyclerView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
